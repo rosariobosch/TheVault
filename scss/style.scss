@@ -1,0 +1,30 @@
+@import '_variables';
+@import '_index';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Barra de navegación */
+.logo {
+    width: 100%;
+}
+
+.contenedorLogo {
+    width: 20%;
+}
+
+.botones {
+    width: 65%;
+}
+
+.enlace {
+    color: $negro;
+}
+
+.barra {
+    box-shadow: 0 2px 3px -3px rgb(143, 143, 143);
+    padding-bottom: 0 !important;
+}
