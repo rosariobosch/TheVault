@@ -2,43 +2,49 @@
 /* Imagen Index */
 .imagenIndex {
   width: 100%;
-  height: 90vh;
+  height: 80vh;
   object-fit: cover; }
 
-.tamanos {
-  width: 100%; }
-
-.cardTamanos {
-  width: 30%;
+.cards {
   display: flex;
-  margin: 2%;
-  border-radius: 5%;
-  -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-  box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15); }
-  .cardTamanos .imagenGrande {
-    width: 50%; }
-    .cardTamanos .imagenGrande img {
-      width: 100%;
-      border-radius: 7px 0px 0px 7px; }
-  .cardTamanos .descripcionGrande {
-    width: 50%;
-    border-radius: 0 7px 10px 7px;
-    background-color: #ffffff; }
-    .cardTamanos .descripcionGrande h2 {
-      margin: 0 0 0 38px;
-      padding-top: 25px;
-      font-size: 32px;
-      color: #474747; }
-    .cardTamanos .descripcionGrande p {
-      height: 125px;
-      margin: 0 0 0 38px;
-      font-family: 'Playfair Display', serif;
-      color: #8d8d8d;
-      line-height: 1.7em;
-      font-size: 15px;
-      font-weight: lighter;
-      overflow: hidden; }
+  justify-content: space-around;
+  margin-bottom: 5%; }
+  .cards .cardTamanos {
+    width: 30%;
+    display: flex;
+    border-radius: 5%;
+    -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15); }
+    .cards .cardTamanos .imagenGrande {
+      width: 50%; }
+      .cards .cardTamanos .imagenGrande img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 7px 0px 0px 7px; }
+    .cards .cardTamanos .descripcionGrande {
+      width: 50%;
+      border-radius: 0 7px 10px 7px;
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-right: 2%; }
+      .cards .cardTamanos .descripcionGrande h2 {
+        margin: 0 0 0 38px;
+        padding-top: 25px;
+        font-size: 32px;
+        color: #474747; }
+      .cards .cardTamanos .descripcionGrande p {
+        height: 125px;
+        margin: 0 0 0 38px;
+        font-family: 'Playfair Display', serif;
+        color: #8d8d8d;
+        line-height: 1.7em;
+        font-size: 15px;
+        font-weight: lighter;
+        overflow: hidden; }
 
 * {
   padding: 0;
@@ -46,6 +52,9 @@
   box-sizing: border-box; }
 
 /* Barra de navegación */
+body {
+  width: 100%; }
+
 .logo {
   width: 100%; }
 
