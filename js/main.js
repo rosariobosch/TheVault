@@ -1,21 +1,40 @@
-let tamanosTitulo = ['Familiar', 'Chico', 'Mini'];
-let tamanosDescripcion = ['Rinde 10 porciones generosas y están hechos con moldes de estilo nórdico.', 'Rinde 4 porciones, es ideal para 2 personas.', 'Rinde una porción individual.'];
-let tamanosImagen = ['<img src="media/imagen_tamano_grande.jpeg" alt="Budín tamaño grande">', '<img src="media/imagen_tamano_chico.jpeg" alt="Budín tamaño chico">', '<img src="media/imagen_tamano_mini.jpeg" alt="Budín tamaño mini">']
-let acumulador = ``;
-
-for (let i = 0; i < tamanosTitulo.length; i++) {
-    console.log(tamanosTitulo[i]);
-    acumulador += `
-    <div class="cardTamanos">
-        <div class="imagenGrande">
-            ${tamanosImagen[i]}
-        </div>
-        <div class="descripcionGrande">
-            <h2>${tamanosTitulo[i]}</h2>
-            <p>${tamanosDescripcion[i]}</p>
-        </div>
-    </div>
-`;
+/* Libros Index */
+class Libro {
+    constructor(id, titulo, autor, imagen, precio) {
+        this.id = id,
+        this.titulo = titulo,
+        this.autor = autor,
+        this.imagen = imagen,
+        this.precio = precio
+    }
 }
 
+const libros = []
+
+libros.push(new Libro(1, 'How to Avoid a Climate Disaster', 'Bill Gates', '<img src="media/imagen_1.jpeg" alt="Tapa del libro">', 2700));
+libros.push(new Libro(2, 'Becoming', 'Michelle Obama', '<img src="media/imagen_2.jpeg" alt="Tapa del libro">', 2000));
+libros.push(new Libro(3, 'All Our Shimmering Skies', 'Trent Dalton', '<img src="media/imagen_3.jpeg" alt="Tapa del libro">', 3000));
+
+let acumulador = ``;
+
+libros.forEach ((libro) => {
+    libro = ` <div class="content">
+        ${libro.imagen}
+        <h3>${libro.titulo}</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <h6>$${libro.precio}</h6>
+        <button onclick="agregarAlCarrito()" class="buy-1">Agregar al carrito</button>
+    </div>`;
+    acumulador += libro;
+}) 
+
 document.getElementById("tamanosTitulo").innerHTML = acumulador;
+
+const carrito = []
+
+function agregarAlCarrito() {
+    carrito.push(libro.id(1));
+    localStorage.carrito = JSON.stringify(carrito);
+}
+
+console.log(carrito)

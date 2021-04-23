@@ -2,55 +2,100 @@
 
 .imagenIndex {
     width: 100%;
-    height: 80vh;
+    height: 70vh;
     object-fit: cover;
 }
 
-.cards {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 5%;
-    .cardTamanos {
-        width: 30%;
-        display: flex;
-        border-radius: 5%;
-        -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-        -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-        box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-        .imagenGrande {
-            width: 50%;
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: 7px 0px 0px 7px;
-            }
-        }
-        .descripcionGrande {
-            width: 50%;
-            border-radius: 0 7px 10px 7px;
-            background-color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding-right: 2%;
-            h2 {
-                margin: 0 0 0 38px;
-                padding-top: 25px;
-                font-size: 32px;
-                color: #474747;
-            }
-            p {
-                height: 125px;
-                margin: 0 0 0 38px;
-                font-family: 'Playfair Display', serif;
-                color: #8d8d8d;
-                line-height: 1.7em;
-                font-size: 15px;
-                font-weight: lighter;
-                overflow: hidden;
-            }
-        }
+body{
+    margin: 0;
+    font-family:Nunito Sans;
     }
-}
-
+    h3{
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+    padding-top: 10px;
+    }
+    a{
+    text-decoration: none;
+    }
+    .gallery{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    }
+    .content{
+    width: 24%;
+    margin: 15px;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+    border-radius:10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: .4s;
+    }
+    .content:hover{
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+    transform: translate(0px, -8px);
+    transition: .6s;
+    }
+    .cards img { 
+    width: 200px;
+    height: 250px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+    }
+    p{
+    text-align: center;
+    color: #b2bec3;
+    padding: 0 8px;
+    }
+    h6{
+    font-size: 26px;
+    text-align: center;
+    color: #222f3e;
+    margin: 0;
+    }
+    .fa{
+    color: #ff9f43;
+    font-size: 26px;
+    transition: .4s;
+    }
+    .fa:hover{
+    transform: scale(1.3);
+    transition: .6s;
+    }
+    button{
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    width: 100%;
+    padding: 15px;
+    border:0px;
+    outline: none;
+    cursor: pointer;
+    margin-top: 5px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    }
+    .buy-1{
+    background-color: #006D77;
+    }
+    @media(max-width: 1000px){
+    .content{
+    width: 46%;
+    }
+    }
+    @media(max-width: 750px){
+    .content{
+    width: 100%;
+    }
+    }
