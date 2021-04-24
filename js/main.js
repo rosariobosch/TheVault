@@ -9,6 +9,22 @@ if (carritoStorage == null) {
     carrito = JSON.parse(carritoStorage);
 }
 
+let usuarioStorage = localStorage.getItem("usuario")
+
+let usuario = '';
+if (usuarioStorage == null) {
+    usuario = prompt('Inresá tu nombre');
+    localStorage.usuario = JSON.stringify(usuario);
+    saludo();
+} else {
+    usuario = JSON.parse(usuarioStorage);
+    saludo();
+}
+
+function saludo () {
+    alert('Bienvenido/a ' + usuario);
+}
+
 class Libro {
     constructor(id, titulo, autor, imagen, precio) {
         this.id = id,
@@ -41,10 +57,12 @@ libros.forEach ((libro) => {
 document.getElementById("tamanosTitulo").innerHTML = acumulador;
 
 let productoPrueba = {id: 1, titulo: 'Libro de Prueba', autor: 'Prueba', precio: 2500};
-
+let precioTotal = 0;
 function agregarAlCarrito(producto) {
     carrito.push(producto);
     localStorage.carrito = JSON.stringify(carrito);
+    precioTotal += productoPrueba.precio;
+    alert(`Se agregó el libro al carrito. El total es $${precioTotal}`);
 }
 
 console.log(carrito)
