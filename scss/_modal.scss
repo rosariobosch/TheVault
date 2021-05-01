@@ -1,0 +1,54 @@
+.modalCarrito {
+    width: 50%;
+    margin: 15px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: .4s;
+    h2 {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .informacion {
+        display: flex;
+        justify-content: space-around;
+        img {
+            width: 100px;
+            height: 150px;
+            text-align: center;
+            display: flex;
+            justify-content: left;
+            object-fit: cover;
+            margin-top: 5%;
+        }
+        .datos {
+            display: flex;
+            flex-direction: column;
+            width: 30vw;
+            .titulos {
+                display: flex;
+                justify-content: space-around;
+                height: 10vh;
+                h4 {
+                    font-size: 1em;
+                }
+            }
+            .total {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                margin-bottom: 2%;
+                .botonFinalizar {
+                    width: 50%;
+                    background-color: #83C5BE;
+                    color: white;
+                }
+            }
+        }
+    }
+
+}

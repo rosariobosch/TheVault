@@ -84,4 +84,13 @@ body{
     .content{
     width: 100%;
     }
+    .carrito {
+        display: flex;
+        justify-content: flex-end;
+        height: 5%;
+      }
+      
+    .carrito img {
+        width: 5%;
+      }
     }

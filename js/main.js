@@ -41,6 +41,8 @@ libros.push(new Libro(1, 'How to Avoid a Climate Disaster', 'Bill Gates', '<img 
 libros.push(new Libro(2, 'Becoming', 'Michelle Obama', '<img src="media/imagen_2.jpeg" alt="Tapa del libro">', 2000));
 libros.push(new Libro(3, 'All Our Shimmering Skies', 'Trent Dalton', '<img src="media/imagen_3.jpeg" alt="Tapa del libro">', 3000));
 
+console.log(libros);
+
 let acumulador = ``;
 
 libros.forEach ((libro) => {
@@ -49,20 +51,19 @@ libros.forEach ((libro) => {
         <h3>${libro.titulo}</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         <h6>$${libro.precio}</h6>
-        <button onclick="agregarAlCarrito(productoPrueba)" class="buy-1">Agregar al carrito</button>
+        <button onclick="agregarAlCarrito(${libro.precio})" class="buy-1">Agregar al carrito</button>
     </div>`;
     acumulador += libro;
+    document.getElementById("tamanosTitulo").innerHTML = acumulador;
 }) 
 
-document.getElementById("tamanosTitulo").innerHTML = acumulador;
 
-let productoPrueba = {id: 1, titulo: 'Libro de Prueba', autor: 'Prueba', precio: 2500};
+
 let precioTotal = 0;
-function agregarAlCarrito(producto) {
-    carrito.push(producto);
+function agregarAlCarrito(precio) {
+    carrito.push(precio);
     localStorage.carrito = JSON.stringify(carrito);
-    precioTotal += productoPrueba.precio;
+    precioTotal += precio;
     alert(`Se agregó el libro al carrito. El total es $${precioTotal}`);
 }
 
-console.log(carrito)

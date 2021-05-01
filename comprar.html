@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300i,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+    <script src="js/comprar.js" defer></script>
 </head>
 <body>
     <header>
@@ -21,13 +21,17 @@
                 <div class="contenedorLogo">
                     <a href="index.html"><img src="media/Logo.png" alt="Logo" class="logo"></a>
                 </div>
+                
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">  
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item imagenCarrito">
+                            <img src="media/shopping-cart.png" alt="Carrito">
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link enlace" href="comprar.html">Comprar</a>
                         </li>
@@ -51,12 +55,15 @@
         <h2>Romance</h2>
         <h2>Teen & Young Adult</h2>
         
-        
+        <div class="modalCarrito" id="modal">
+          
+        </div>  
+
 
     </main>
     <footer>
 
     </footer>
-    <script src="js/comprar.js"></script>
+    
 </body>
 </html>
