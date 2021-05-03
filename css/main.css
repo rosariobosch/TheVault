@@ -94,50 +94,75 @@ main {
   main h2 {
     display: block; }
 
-.modalCarrito {
-  width: 50%;
-  margin: 15px;
-  box-sizing: border-box;
-  text-align: center;
-  border-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  padding-top: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: .4s; }
-  .modalCarrito h2 {
-    display: flex;
-    justify-content: flex-start; }
-  .modalCarrito .informacion {
-    display: flex;
-    justify-content: space-around; }
-    .modalCarrito .informacion img {
-      width: 100px;
-      height: 150px;
-      text-align: center;
+.contenedorModal {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s;
+  opacity: 0;
+  visibility: hidden; }
+  .contenedorModal .modalCarrito {
+    width: 50%;
+    margin: 15px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: .4s;
+    background-color: white; }
+    .contenedorModal .modalCarrito .informacion {
       display: flex;
-      justify-content: left;
-      object-fit: cover;
-      margin-top: 5%; }
-    .modalCarrito .informacion .datos {
-      display: flex;
-      flex-direction: column;
-      width: 30vw; }
-      .modalCarrito .informacion .datos .titulos {
+      justify-content: space-around; }
+      .contenedorModal .modalCarrito .informacion img {
+        width: 100px;
+        height: 150px;
+        text-align: center;
         display: flex;
-        justify-content: space-around;
-        height: 10vh; }
-        .modalCarrito .informacion .datos .titulos h4 {
-          font-size: 1em; }
-      .modalCarrito .informacion .datos .total {
+        justify-content: left;
+        object-fit: cover;
+        margin-top: 5%; }
+      .contenedorModal .modalCarrito .informacion .datos {
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
-        margin-bottom: 2%; }
-        .modalCarrito .informacion .datos .total .botonFinalizar {
-          width: 50%;
-          background-color: #83C5BE;
-          color: white; }
+        width: 30vw; }
+        .contenedorModal .modalCarrito .informacion .datos .titulos {
+          display: flex;
+          justify-content: space-around;
+          height: fit-content; }
+        .contenedorModal .modalCarrito .informacion .datos .modalProducto {
+          display: flex;
+          justify-content: space-around;
+          width: fit-content; }
+          .contenedorModal .modalCarrito .informacion .datos .modalProducto h4 {
+            font-size: 1em; }
+        .contenedorModal .modalCarrito .informacion .datos .total {
+          display: flex;
+          justify-content: flex-end;
+          margin-bottom: 2%; }
+          .contenedorModal .modalCarrito .informacion .datos .total .botonFinalizar {
+            width: fit-content;
+            background-color: #83C5BE;
+            color: white; }
+    .contenedorModal .modalCarrito .tituloModal {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 2%; }
+      .contenedorModal .modalCarrito .tituloModal .botonCerrar {
+        width: 5%;
+        border-radius: 5%; }
+
+.modalActive {
+  opacity: 1;
+  visibility: visible; }
 
 * {
   padding: 0;
@@ -171,7 +196,6 @@ body {
   align-items: center; }
   .navbar-nav .imagenCarrito {
     display: flex;
-    justify-content: flex-end; }
-    .navbar-nav .imagenCarrito img {
-      width: 4vh;
-      height: 4vh; }
+    justify-content: flex-end;
+    width: 4vh;
+    height: 4vh; }
