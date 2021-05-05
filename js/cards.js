@@ -21,7 +21,7 @@ class Libro {
 libros.push(new Libro('thriller', 'The Silent Patient', 'Alex Michaelides', '<img src="media/thriller_1.jpeg" alt="Tapa del libro">', 1400));
 libros.push(new Libro('thriller', 'Bad Blood', 'John Carreyrou', '<img src="media/thriller_2.jpeg" alt="Tapa del libro">', 1500));
 libros.push(new Libro('thriller', 'Caught', 'Harlan Coben', '<img src="media/thriller_3.jpeg" alt="Tapa del libro">', 1200));
-libros.push(new Libro('thriller', 'I\'ll Be Gone in the Dark', 'Michelle McNamara', '<img src="media/thriller_4.jpeg" alt="Tapa del libro">', 1700));
+libros.push(new Libro('thriller', 'I&#39ll Be Gone in the Dark', 'Michelle McNamara', '<img src="media/thriller_4.jpeg" alt="Tapa del libro">', 1700));
 
 libros2.push(new Libro('science fiction', '1984', 'George Orwell', '<img src="media/sfiction_1.jpeg" alt="Tapa del libro">', 1200));
 libros2.push(new Libro('science fiction', 'A Game of Thrones', 'George R. R. Martin', '<img src="media/sfiction_2.jpeg" alt="Tapa del libro">', 1900));
@@ -36,7 +36,7 @@ libros3.push(new Libro('children', 'HOPE', 'Penguin Australia', '<img src="media
 libros4.push(new Libro('young adult', 'Wonder', 'R J Palacio', '<img src="media/youngAdult_1.jpeg" alt="Tapa del libro">', 1500));
 libros4.push(new Libro('young adult', 'The Little Prince', 'Antoine de Saint-Exupery ', '<img src="media/youngAdult_2.jpeg" alt="Tapa del libro">', 500));
 libros4.push(new Libro('young adult', 'The Hunger Games', 'Suzanne Collins', '<img src="media/youngAdult_3.jpeg" alt="Tapa del libro">', 1600));
-libros4.push(new Libro('young adult', 'Harry Potter and the Philosopher\'s Stone', 'J.K. Rowling', '<img src="media/youngAdult_4.jpeg" alt="Tapa del libro">', 1550));
+libros4.push(new Libro('young adult', 'Harry Potter and the Philosopher&#39s Stone', 'J.K. Rowling', '<img src="media/youngAdult_4.jpeg" alt="Tapa del libro">', 1550));
 
 libros.forEach((libro) => {
     const divThriller = document.createElement('div')
@@ -47,7 +47,7 @@ libros.forEach((libro) => {
         <h3>${libro.titulo}</h3>
         <p>${libro.autor}</p>
         <h6>$${libro.precio}</h6>
-        <button onclick="agregarAlCarrito(${libro})" class="buy-1">Agregar al carrito</button>
+        <button onclick='agregarAlCarrito(${JSON.stringify(libro)})' class="buy-1">Agregar al carrito</button>
     </div>`
     contenedorThriller.appendChild(divThriller)
 })
@@ -61,8 +61,8 @@ libros2.forEach((libro) => {
         <h3>${libro.titulo}</h3>
         <p>${libro.autor}</p>
         <h6>$${libro.precio}</h6>
-        <button onclick="agregarAlCarrito(${libro})" class="buy-1">Agregar al carrito</button>
-    </div>`;
+        <button onclick='agregarAlCarrito(${JSON.stringify(libro)})' class="buy-1">Agregar al carrito</button>
+    </div>`
     contenedorSciFi.appendChild(divSciFi)
 })
 
@@ -75,7 +75,7 @@ libros3.forEach((libro) => {
         <h3>${libro.titulo}</h3>
         <p>${libro.autor}</p>
         <h6>$${libro.precio}</h6>
-        <button onclick="agregarAlCarrito(${libro})" class="buy-1">Agregar al carrito</button>
+        <button onclick='agregarAlCarrito(${JSON.stringify(libro)})' class="buy-1">Agregar al carrito</button>
     </div>`
     contenedorChildren.appendChild(divChildren)
 })
@@ -89,7 +89,7 @@ libros4.forEach((libro) => {
         <h3>${libro.titulo}</h3>
         <p>${libro.autor}</p>
         <h6>$${libro.precio}</h6>
-        <button onclick="agregarAlCarrito(${libro})" class="buy-1">Agregar al carrito</button>
+        <button onclick='agregarAlCarrito(${JSON.stringify(libro)})' class="buy-1">Agregar al carrito</button>
     </div>`
     contenedorYoungAdult.appendChild(divYoungAdult)
 })

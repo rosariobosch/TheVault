@@ -132,17 +132,23 @@ main {
       .contenedorModal .modalCarrito .informacion .datos {
         display: flex;
         flex-direction: column;
-        width: 30vw; }
+        width: 40; }
         .contenedorModal .modalCarrito .informacion .datos .titulos {
           display: flex;
           justify-content: space-around;
           height: fit-content; }
-        .contenedorModal .modalCarrito .informacion .datos .modalProducto {
+        .contenedorModal .modalCarrito .informacion .datos .productosContenedor {
           display: flex;
-          justify-content: space-around;
-          width: fit-content; }
-          .contenedorModal .modalCarrito .informacion .datos .modalProducto h4 {
-            font-size: 1em; }
+          flex-direction: column;
+          align-content: space-around; }
+          .contenedorModal .modalCarrito .informacion .datos .productosContenedor .modalProducto {
+            display: flex;
+            justify-content: space-around;
+            align-content: space-around;
+            width: fit-content; }
+            .contenedorModal .modalCarrito .informacion .datos .productosContenedor .modalProducto h4 {
+              font-size: 1em;
+              width: 15vw; }
         .contenedorModal .modalCarrito .informacion .datos .total {
           display: flex;
           justify-content: flex-end;

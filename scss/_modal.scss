@@ -37,18 +37,25 @@
             .datos {
                 display: flex;
                 flex-direction: column;
-                width: 30vw;
+                width: 40;
                 .titulos {
                     display: flex;
                     justify-content: space-around;
                     height: fit-content;
                 }
-                .modalProducto {
+                .productosContenedor {
                     display: flex;
-                    justify-content: space-around;
-                    width: fit-content;
-                    h4 {
-                        font-size: 1em;
+                    flex-direction: column;
+                    align-content: space-around;
+                    .modalProducto {
+                        display: flex;
+                        justify-content: space-around;
+                        align-content: space-around;
+                        width: fit-content;
+                        h4 {
+                            font-size: 1em;
+                            width: 15vw;
+                        }
                     }
                 }
                 .total {

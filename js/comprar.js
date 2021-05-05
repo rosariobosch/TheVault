@@ -3,20 +3,23 @@
 let carritoStorage = localStorage.getItem("carrito");
 let carrito = []
 const carritoContenedor = document.getElementById('carritoContenedor');
+let precioTotal = 0;
 
 if (carritoStorage == null) {
     carrito = [];
 } else {
     carrito = JSON.parse(carritoStorage)
+    actualizarCarrito()
 }
 
-let precioTotal = 0;
+
 function agregarAlCarrito(libro) {
     carrito.push(libro)
-    localStorage.carrito = JSON.stringify(carrito);
-    precioTotal += libro.precio
+    localStorage.carrito = JSON.stringify(carrito)
     console.log(carrito)
     actualizarCarrito()
+    calcularTotal()
+
 }
 
 function actualizarCarrito() {
@@ -31,5 +34,9 @@ function actualizarCarrito() {
         `
         carritoContenedor.appendChild(divModal)
     })
+}
 
+function calcularTotal() {
+    precioTotal = carrito.reduce((acc, el) => acc += el.precio, 0)
+    document.getElementById('precioFinal').innerHTML = `Total: $${precioTotal}`
 }
