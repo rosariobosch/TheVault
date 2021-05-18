@@ -47,7 +47,7 @@ libros.forEach((libro) => {
         <h3>${libro.titulo}</h3>
         <p>${libro.autor}</p>
         <h6>$${libro.precio}</h6>
-        <button onclick='agregarAlCarrito(${JSON.stringify(libro)})' class="buy-1">Agregar al carrito</button>
+        <button onclick='agregarAlCarrito(${JSON.stringify(libro)})' class="button buy-1">Agregar al carrito</button>
     </div>`
     contenedorThriller.appendChild(divThriller)
 })
@@ -61,7 +61,7 @@ libros2.forEach((libro) => {
         <h3>${libro.titulo}</h3>
         <p>${libro.autor}</p>
         <h6>$${libro.precio}</h6>
-        <button onclick='agregarAlCarrito(${JSON.stringify(libro)})' class="buy-1">Agregar al carrito</button>
+        <button onclick='agregarAlCarrito(${JSON.stringify(libro)})' class="button buy-1">Agregar al carrito</button>
     </div>`
     contenedorSciFi.appendChild(divSciFi)
 })
@@ -75,7 +75,7 @@ libros3.forEach((libro) => {
         <h3>${libro.titulo}</h3>
         <p>${libro.autor}</p>
         <h6>$${libro.precio}</h6>
-        <button onclick='agregarAlCarrito(${JSON.stringify(libro)})' class="buy-1">Agregar al carrito</button>
+        <button onclick='agregarAlCarrito(${JSON.stringify(libro)})' class="button buy-1">Agregar al carrito</button>
     </div>`
     contenedorChildren.appendChild(divChildren)
 })
@@ -89,7 +89,7 @@ libros4.forEach((libro) => {
         <h3>${libro.titulo}</h3>
         <p>${libro.autor}</p>
         <h6>$${libro.precio}</h6>
-        <button onclick='agregarAlCarrito(${JSON.stringify(libro)})' class="buy-1">Agregar al carrito</button>
+        <button onclick='agregarAlCarrito(${JSON.stringify(libro)})' class="button buy-1">Agregar al carrito</button>
     </div>`
     contenedorYoungAdult.appendChild(divYoungAdult)
 })

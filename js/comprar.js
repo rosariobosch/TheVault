@@ -10,6 +10,7 @@ if (carritoStorage == null) {
 } else {
     carrito = JSON.parse(carritoStorage)
     actualizarCarrito()
+    calcularTotal()
 }
 
 
@@ -19,7 +20,6 @@ function agregarAlCarrito(libro) {
     console.log(carrito)
     actualizarCarrito()
     calcularTotal()
-
 }
 
 function actualizarCarrito() {
@@ -31,6 +31,7 @@ function actualizarCarrito() {
         <h4>${libro.titulo}</h4>
         <h4>${libro.autor}</h4>
         <h4>${libro.precio}</h4>
+        <button onclick='eliminarProducto()' class="button botonEliminar" id="">x</button>
         `
         carritoContenedor.appendChild(divModal)
     })
@@ -39,4 +40,11 @@ function actualizarCarrito() {
 function calcularTotal() {
     precioTotal = carrito.reduce((acc, el) => acc += el.precio, 0)
     document.getElementById('precioFinal').innerHTML = `Total: $${precioTotal}`
+}
+
+function eliminarProducto() {
+    carrito.splice('${JSON.stringify(libro)}', 1)
+    localStorage.carrito = JSON.stringify(carrito)
+    actualizarCarrito()
+    calcularTotal()
 }

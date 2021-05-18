@@ -13,7 +13,9 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300i,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="js/modal.js" defer></script>
+    <script src="js/comprar.js" defer></script>
     <script src="js/main.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <header>
@@ -53,7 +55,7 @@
         <div class="modalCarrito" id="modal">
             <div class="tituloModal">
                 <h2>Carrito</h2>
-                <button class="botonCerrar" id="carritoCerrar"><i></i></button>
+                <button class="button buy-1 botonCerrar" id="carritoCerrar">x</button>
             </div>
             <div class="informacion">
                 <div class="datos">
@@ -62,13 +64,15 @@
                         <h3>Autor</h3>
                         <h3>Precio</h3>
                     </div>
-                  <!--   <div class="modalProducto" id="carritoContenedor">
+                    <div id="carritoContenedor" class="productosContenedor">
+                        <!--   <div class="modalProducto">
                         <h4>${producto.titulo}</h4>
                         <h4>${producto.autor}</h4>
                         <h4>${producto.precio}</h4>
                     </div> -->
+                    </div>
                     <div class="total">
-                        <!-- <h4>Total: ${precioTotal}</h4> -->
+                        <h4 id="precioFinal">Total: $0</h4>
                         <button class="btn botonFinalizar">Finalizar compra</button>
                     </div>
                 </div>
