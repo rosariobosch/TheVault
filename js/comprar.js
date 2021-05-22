@@ -4,7 +4,9 @@ let carritoStorage = localStorage.getItem("carrito");
 let carrito = []
 const carritoContenedor = document.getElementById('carritoContenedor');
 let precioTotal = 0;
+let contadorCarrito = document.getElementById('contadorCarrito')
 
+//Almacenamiento productos en carrito
 if (carritoStorage == null) {
     carrito = [];
 } else {
@@ -13,7 +15,7 @@ if (carritoStorage == null) {
     calcularTotal()
 }
 
-
+//Agregar producto al carrito
 function agregarAlCarrito(libro) {
     carrito.push(libro)
     localStorage.carrito = JSON.stringify(carrito)
@@ -22,6 +24,7 @@ function agregarAlCarrito(libro) {
     calcularTotal()
 }
 
+//Actualizar carrito/modal
 function actualizarCarrito() {
     carritoContenedor.innerHTML = ``;
     carrito.forEach((libro) => {
@@ -35,16 +38,20 @@ function actualizarCarrito() {
         `
         carritoContenedor.appendChild(divModal)
     })
+    contadorCarrito.innerHTML = carrito.length
+
 }
 
+//Calcular total
 function calcularTotal() {
     precioTotal = carrito.reduce((acc, el) => acc += el.precio, 0)
     document.getElementById('precioFinal').innerHTML = `Total: $${precioTotal}`
 }
 
+//Eliminar producto del carrito
 function eliminarProducto() {
     carrito.splice('${JSON.stringify(libro)}', 1)
     localStorage.carrito = JSON.stringify(carrito)
     actualizarCarrito()
     calcularTotal()
-}
+}   

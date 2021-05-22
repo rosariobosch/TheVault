@@ -38,12 +38,21 @@ body {
 .navbar-nav {
     display: flex;
     align-items: center;
-    .imagenCarrito{
+    li {
         display: flex;
-        justify-content: flex-end;
-        width: 4vh;
-        height: 4vh;
+        align-items: center;
+        p {
+            color: white;
+            margin-bottom: 0;
+        }
+        .imagenCarrito{
+            display: flex;
+            justify-content: flex-end;
+            width: 4vh;
+            height: 4vh;
+        }
     }
+    
 }
 .imagenIndex {
     width: 100%;

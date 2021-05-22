@@ -204,11 +204,17 @@ body {
 .navbar-nav {
   display: flex;
   align-items: center; }
-  .navbar-nav .imagenCarrito {
+  .navbar-nav li {
     display: flex;
-    justify-content: flex-end;
-    width: 4vh;
-    height: 4vh; }
+    align-items: center; }
+    .navbar-nav li p {
+      color: white;
+      margin-bottom: 0; }
+    .navbar-nav li .imagenCarrito {
+      display: flex;
+      justify-content: flex-end;
+      width: 4vh;
+      height: 4vh; }
 
 .imagenIndex {
   width: 100%;
