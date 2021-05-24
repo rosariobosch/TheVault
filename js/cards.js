@@ -38,6 +38,7 @@ libros4.push(new Libro(18, 'The Little Prince', 'Antoine de Saint-Exupery ', '<i
 libros4.push(new Libro(19, 'The Hunger Games', 'Suzanne Collins', '<img src="media/youngAdult_3.jpeg" alt="Tapa del libro">', 1600));
 libros4.push(new Libro(20, 'Harry Potter and the Philosopher&#39s Stone', 'J.K. Rowling', '<img src="media/youngAdult_4.jpeg" alt="Tapa del libro">', 1550));
 
+//Cards thriller
 libros.forEach((libro) => {
     const divThriller = document.createElement('div')
     divThriller.classList.add('cards')
@@ -47,11 +48,12 @@ libros.forEach((libro) => {
         <h3>${libro.titulo}</h3>
         <p>${libro.autor}</p>
         <h6>$${libro.precio}</h6>
-        <button onclick='agregarAlCarrito(${JSON.stringify(libro)})' class="button buy-1">Agregar al carrito</button>
+        <button onclick='agregarAlCarrito(${JSON.stringify(libro)})' class="button buy-1" id='${libro.id}'>Agregar al carrito</button>
     </div>`
     contenedorThriller.appendChild(divThriller)
 })
 
+//Cards science fiction
 libros2.forEach((libro) => {
     const divSciFi = document.createElement('div')
     divSciFi.classList.add('cards')
@@ -61,11 +63,12 @@ libros2.forEach((libro) => {
         <h3>${libro.titulo}</h3>
         <p>${libro.autor}</p>
         <h6>$${libro.precio}</h6>
-        <button onclick='agregarAlCarrito(${JSON.stringify(libro)})' class="button buy-1">Agregar al carrito</button>
+        <button onclick='agregarAlCarrito(${JSON.stringify(libro)})' class="button buy-1" id='${libro.id}'>Agregar al carrito</button>
     </div>`
     contenedorSciFi.appendChild(divSciFi)
 })
 
+//Cards children
 libros3.forEach((libro) => {
     const divChildren = document.createElement('div')
     divChildren.classList.add('cards')
@@ -75,11 +78,12 @@ libros3.forEach((libro) => {
         <h3>${libro.titulo}</h3>
         <p>${libro.autor}</p>
         <h6>$${libro.precio}</h6>
-        <button onclick='agregarAlCarrito(${JSON.stringify(libro)})' class="button buy-1">Agregar al carrito</button>
+        <button onclick='agregarAlCarrito(${JSON.stringify(libro)})' class="button buy-1" id='${libro.id}'>Agregar al carrito</button>
     </div>`
     contenedorChildren.appendChild(divChildren)
 })
 
+//Cards young adult
 libros4.forEach((libro) => {
     const divYoungAdult = document.createElement('div')
     divYoungAdult.classList.add('cards')
@@ -89,7 +93,7 @@ libros4.forEach((libro) => {
         <h3>${libro.titulo}</h3>
         <p>${libro.autor}</p>
         <h6>$${libro.precio}</h6>
-        <button onclick='agregarAlCarrito(${JSON.stringify(libro)})' class="button buy-1">Agregar al carrito</button>
+        <button onclick='agregarAlCarrito(${JSON.stringify(libro)})' class="button buy-1" id='${libro.id}'>Agregar al carrito</button>
     </div>`
     contenedorYoungAdult.appendChild(divYoungAdult)
 })

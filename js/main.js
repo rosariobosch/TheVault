@@ -30,19 +30,4 @@ libros.forEach((libro) => {
         <button onclick='agregarAlCarrito(${JSON.stringify(libro)})' class="button buy-1" id="${libro.id}">Agregar al carrito</button>
     </div>`);
     contenedorNovedades.append(divNovedades)
-
-    const botonComprar = $(`#${libro.id}`)
-
-    $(botonComprar).on('click', function () {
-        $(botonComprar).css('background-color', '#35adb8')
-            .fadeOut('slow')
-            .fadeIn('slow')
-            .html('Agregado al carrito')
-        setTimeout(() => {
-            $(botonComprar).fadeOut('slow')
-                .fadeIn('slow')
-                .html('Agregar al carrito')
-                .css('background-color', '#006D77')
-        }, 3000);
-    })
 })

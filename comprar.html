@@ -13,9 +13,10 @@
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300i,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="js/cards.js" defer></script>
     <script src="js/modal.js" defer></script>
     <script src="js/comprar.js" defer></script>
+    <script src="js/cards.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -86,7 +87,7 @@
                     </div>
                     <div class="total">
                         <h4 id="precioFinal">Total: $0</h4>
-                        <button class="btn botonFinalizar buy-1">Finalizar compra</button>
+                        <button class="btn botonFinalizar buy-1" onclick="finalizarCompra()">Finalizar compra</button>
                     </div>
                 </div>
             </div>
