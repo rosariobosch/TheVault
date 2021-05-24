@@ -35,7 +35,7 @@ function actualizarCarrito() {
         <h4>${libro.titulo}</h4>
         <h4>${libro.autor}</h4>
         <h4>${libro.precio}</h4>
-        <button onclick='eliminarProducto()' class="button botonEliminar" id="">x</button>
+        <button onclick='eliminarProducto(${libro.id})' class="button botonEliminar" id="${libro.id}">x</button>
         `
         carritoContenedor.appendChild(divModal)
     })
@@ -50,8 +50,10 @@ function calcularTotal() {
 }
 
 //Eliminar producto del carrito
-function eliminarProducto() {
-    carrito.splice('${JSON.stringify(libro)}', 1)
+function eliminarProducto(id) {
+    let productoAEliminar = carrito.find( el => el.id == id )
+    let indice = carrito.indexOf(productoAEliminar)
+        carrito.splice(indice, 1)
     localStorage.carrito = JSON.stringify(carrito)
     actualizarCarrito()
     calcularTotal()
