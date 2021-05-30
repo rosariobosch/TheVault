@@ -51,56 +51,56 @@ function calcularTotal() {
 
 //Eliminar producto del carrito
 function eliminarProducto(id) {
-    let productoAEliminar = carrito.find( el => el.id == id )
+    let productoAEliminar = carrito.find(el => el.id == id)
     let indice = carrito.indexOf(productoAEliminar)
-        carrito.splice(indice, 1)
+    carrito.splice(indice, 1)
     localStorage.carrito = JSON.stringify(carrito)
     actualizarCarrito()
     calcularTotal()
-}   
+}
 
 //Efecto boton agregar carrito
 function efectoBoton(libro) {
     const botonComprar = $(`#${libro.id}`)
     $(botonComprar).css('background-color', '#35adb8')
-            .fadeOut('slow')
+        .fadeOut('slow')
+        .fadeIn('slow')
+        .html('Agregado al carrito')
+    setTimeout(() => {
+        $(botonComprar).fadeOut('slow')
             .fadeIn('slow')
-            .html('Agregado al carrito')
-        setTimeout(() => {
-            $(botonComprar).fadeOut('slow')
-                .fadeIn('slow')
-                .html('Agregar al carrito')
-                .css('background-color', '#006D77')
-        }, 3000);
+            .html('Agregar al carrito')
+            .css('background-color', '#006D77')
+    }, 3000);
 }
 
 //Generar link de Mercado Pago
 
 const finalizarCompra = async () => {
     const carritoAPagar = carrito.map(el =>
-        ({
-            "title": el.titulo,
-            "description": "",
-            "picture_url": "",
-            "category_id": el.id,
-            "quantity": 1,
-            "currency_id": "ARS",
-            "unit_price": el.precio
-        })
-        )
+    ({
+        "title": el.titulo,
+        "description": "",
+        "picture_url": "",
+        "category_id": el.id,
+        "quantity": 1,
+        "currency_id": "ARS",
+        "unit_price": el.precio
+    })
+    )
 
-    const response =  await fetch( "https://api.mercadopago.com/checkout/preferences",{ 
+    const response = await fetch("https://api.mercadopago.com/checkout/preferences", {
         method: "POST",
         headers: {
             Authorization: "Bearer TEST-6190420186328087-052415-1c28788ad472b86323dd8f29cacb7e6f-192623993",
         },
         body: JSON.stringify({
-              "items": carritoAPagar,
-        }),  
-    });  
+            "items": carritoAPagar,
+        }),
+    });
     const data = await response.json();
 
     if (data.init_point != null) {
-    window.open(data.init_point, '_blank');
+        window.open(data.init_point, '_blank');
     }
 };

@@ -1,3 +1,5 @@
+/* Eventos modal */
+
 const abrirCarrito = document.getElementById('botonCarrito');
 const cerrarCarrito = document.getElementById('carritoCerrar');
 
