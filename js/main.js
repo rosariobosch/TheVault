@@ -10,7 +10,7 @@ libros.forEach((libro) => {
         <div class="content">
         ${libro.imagen}
         <h3>${libro.titulo}</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <p>${libro.autor}</p>
         <h6>$${libro.precio}</h6>
         <button onclick='agregarAlCarrito(${JSON.stringify(libro)})' class="button buy-1" id="${libro.id}">Agregar al carrito</button>
     </div>`);
