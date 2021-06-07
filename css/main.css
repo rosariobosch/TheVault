@@ -81,6 +81,8 @@ h6 {
 main {
   display: flex;
   flex-direction: column; }
+  main .tituloComprar {
+    padding-top: 7%; }
   main h2 {
     display: block; }
 

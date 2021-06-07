@@ -1,7 +1,10 @@
 main {
     display: flex;
     flex-direction: column;
+    .tituloComprar {
+        padding-top: 7%;
+    }
     h2 {
-        display: block;
+        display: block;      
     }
 }
