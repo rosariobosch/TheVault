@@ -26,8 +26,9 @@
 
 <body>
     <header>
+        <!-- Barra de navegación -->
         <nav
-            class="navbar navbar-expand-lg navbar-light bg-light bg-body py-0 rounded animate__animated animate__fadeInRight">
+            class="navbar navbar-expand-lg navbar-light bg-light bg-body py-0 rounded animate__animated animate__fadeInRight sticky">
             <div class="container-fluid navBarStyle barra">
                 <div class="contenedorLogo">
                     <a href="index.html"><img src="media/Logo.png" alt="Logo" class="logo"></a>
@@ -51,6 +52,7 @@
                 </div>
         </nav>
     </header>
+    <!-- Novedades -->
     <main>
         <img src="media/imagen_index.jpg" alt="Imagen libros" class="imagenIndex">
         <h1>Novedades</h1>
@@ -72,13 +74,11 @@
                         <h3>Precio</h3>
                     </div>
                     <div id="carritoContenedor" class="productosContenedor">
-                        <!--   <div class="modalProducto">
-                        <h4>${producto.titulo}</h4>
-                        <h4>${producto.autor}</h4>
-                        <h4>${producto.precio}</h4>
-                    </div> -->
                     </div>
                     <div class="total">
+                        <div class="vaciarCarrito">
+                            <button class="btn botonVaciar" onclick="vaciarCarrito()">Vaciar carrito</button>
+                        </div>
                         <h4 id="precioFinal">Total: $0</h4>
                         <button class="btn botonFinalizar" onclick="finalizarCompra()">Finalizar compra</button>
                     </div>

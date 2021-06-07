@@ -65,6 +65,10 @@
                             justify-content: center;
                             border-radius: 5%;
                             margin: 2%;
+                            background-color: #e9e6e6;
+                        }
+                        .botonEliminar:hover {
+                            background-color: #83C5BE;
                         }
                     }
                 }
@@ -75,12 +79,29 @@
                     margin-bottom: 2%;
                     .botonFinalizar {
                         width: fit-content;
-                        background-color: #83C5BE;
+                        background-color: #006D77;
                         color: white;
+                    }
+                    .botonFinalizar:hover {
+                        background-color: #83C5BE;
+                        transform: scale(1.05);
                     }
                     h4 {
                         padding: 2%;
                     }
+                    .vaciarCarrito {
+                        width: 50%;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        .botonVaciar {
+                            background-color: #83C5BE;
+                            color: white;
+                            font-size: .9em;
+                            margin-left: 15%;
+                            margin-top: 5%;
+                        }
+                    }  
                 }
             }
         }

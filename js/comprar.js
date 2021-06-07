@@ -19,7 +19,6 @@ if (carritoStorage == null) {
 function agregarAlCarrito(libro) {
     carrito.push(libro)
     localStorage.carrito = JSON.stringify(carrito)
-    console.log(carrito)
     actualizarCarrito()
     calcularTotal()
     efectoBoton(libro)
@@ -54,6 +53,15 @@ function eliminarProducto(id) {
     let productoAEliminar = carrito.find(el => el.id == id)
     let indice = carrito.indexOf(productoAEliminar)
     carrito.splice(indice, 1)
+    localStorage.carrito = JSON.stringify(carrito)
+    actualizarCarrito()
+    calcularTotal()
+}
+
+//Vaciar carrito
+
+function vaciarCarrito() {
+    carrito = []
     localStorage.carrito = JSON.stringify(carrito)
     actualizarCarrito()
     calcularTotal()
@@ -103,4 +111,4 @@ const finalizarCompra = async () => {
     if (data.init_point != null) {
         window.open(data.init_point, '_blank');
     }
-};
+}
