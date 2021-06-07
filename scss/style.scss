@@ -26,6 +26,8 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
+    background: white;
+    z-index: 2;
 }
 
 .navbar-light .navbar-nav .nav-link {
